@@ -23,3 +23,5 @@ Perkembangan teknologi informasi pada dasarnya membuat pekerjaan yang biasa dila
 6. Ketika customer ingin membayar, dibutuhkan suatu method yang langsung menghitung total belanja berikut dengan diskon yang ditetapkan.
 
 ## Flowchart
+![flowchart](https://github.com/akinladiko/super-cashier/blob/main/flowchart_python.jpg?raw=true)
+
