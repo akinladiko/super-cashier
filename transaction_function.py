@@ -319,6 +319,9 @@ def hapus_barang():
             keranjang.pop(index_hapus_barang)
             jumlah_belanja.pop(index_hapus_barang)
             harga_belanja.pop(index_hapus_barang)
+            if keranjang == []:
+                global bayar
+                bayar = True
 
             print("Kembali ke main menu")
             return main_menu()
@@ -330,6 +333,8 @@ def hapus_barang():
         else: 
             print("Pilihan invalid, kembali ke main menu")
             return main_menu()
+        
+
 
 
 
@@ -353,6 +358,8 @@ def reset_barang():
             keranjang.clear()
             jumlah_belanja.clear()
             harga_belanja.clear()
+            global bayar
+            bayar = True
 
             print("Kembali ke main menu")
             return main_menu()
@@ -397,6 +404,10 @@ def pembayaran():
         print("Keranjang belanja kosong, tidak perlu pembayaran apapun")
         main_menu()
     else:
+        for indexlist in range (0, len(keranjang)):
+            print(f'''
+            {indexlist}. {keranjang[indexlist]} berjumlah {jumlah_belanja[indexlist]}''')
+        
         print(f"Total pembayaran adalah Rp {count_total_harga}")
 
         if count_total_harga > 500000:
